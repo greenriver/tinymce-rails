@@ -21,7 +21,7 @@ module TinyMCE::Rails
     
     # Returns the JavaScript code required to initialize TinyMCE.
     def tinymce_javascript(config=:default, options={})
-      "tinyMCE.init(#{tinymce_configuration(config, options).to_javascript});".html_safe
+      "document.domain = document.domain; tinyMCE.init(#{tinymce_configuration(config, options).to_javascript});".html_safe
     end
     
     # Returns the TinyMCE configuration object.

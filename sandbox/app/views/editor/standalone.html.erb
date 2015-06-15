@@ -9,6 +9,7 @@
 <%= text_area_tag :editor, "", :rows => 20, :cols => 60 %>
 
 <script type="text/javascript" charset="utf-8">
+  document.domain = document.domain;
   tinyMCE.init({
     mode: 'textareas',
     theme: 'advanced'
